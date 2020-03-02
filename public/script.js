@@ -4,7 +4,7 @@ new Vue({
     total: 0,
     products: [],
     cart: [],
-    search: "",
+    search: "cat",
     lastSearch: "",
     loading: false,
   },
@@ -53,5 +53,10 @@ new Vue({
     currency(price) {
       return `$${price.toFixed(2)}`;
     },
+  },
+
+  // Lifecycle Hooks
+  created() {
+    this.onSubmit();
   },
 });
